@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://data.api.sitescope.mercury.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://data.api.sitescope.mercury.com" xmlns:intf="http://data.api.sitescope.mercury.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns1="http://exception.configuration.api.sitescope.mercury.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema targetNamespace="http://data.api.sitescope.mercury.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://exception.configuration.api.sitescope.mercury.com"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="ArrayOf_xsd_string">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:string[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+  </schema>
+  <schema targetNamespace="http://exception.configuration.api.sitescope.mercury.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://data.api.sitescope.mercury.com"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="ExternalServiceAPIException">
+    <sequence>
+     <element name="errorCode" type="xsd:long"/>
+     <element name="errorMessage" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getDataRequest">
+
+      <wsdl:part name="in0" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+      <wsdl:part name="in1" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="in2" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDataResponse">
+
+      <wsdl:part name="getDataReturn" type="xsd:base64Binary">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="ExternalServiceAPIException">
+
+      <wsdl:part name="fault" type="tns1:ExternalServiceAPIException">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMonitorTypesWithMetricNamesResponse">
+
+      <wsdl:part name="getMonitorTypesWithMetricNamesReturn" type="xsd:base64Binary">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDataWithTopologyRequest">
+
+      <wsdl:part name="in0" type="impl:ArrayOf_xsd_string">
+
+      </wsdl:part>
+
+      <wsdl:part name="in1" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="in2" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDataWithTopologyResponse">
+
+      <wsdl:part name="getDataWithTopologyReturn" type="xsd:base64Binary">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMonitorTypesWithMetricNamesRequest">
+
+      <wsdl:part name="in0" type="xsd:boolean">
+
+      </wsdl:part>
+
+      <wsdl:part name="in1" type="xsd:string">
+
+      </wsdl:part>
+
+      <wsdl:part name="in2" type="xsd:string">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="IAPIDataAcquisition">
+
+      <wsdl:operation name="getData" parameterOrder="in0 in1 in2">
+
+         <wsdl:input message="impl:getDataRequest" name="getDataRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getDataResponse" name="getDataResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:ExternalServiceAPIException" name="ExternalServiceAPIException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDataWithTopology" parameterOrder="in0 in1 in2">
+
+         <wsdl:input message="impl:getDataWithTopologyRequest" name="getDataWithTopologyRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getDataWithTopologyResponse" name="getDataWithTopologyResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:ExternalServiceAPIException" name="ExternalServiceAPIException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMonitorTypesWithMetricNames" parameterOrder="in0 in1 in2">
+
+         <wsdl:input message="impl:getMonitorTypesWithMetricNamesRequest" name="getMonitorTypesWithMetricNamesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getMonitorTypesWithMetricNamesResponse" name="getMonitorTypesWithMetricNamesResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:ExternalServiceAPIException" name="ExternalServiceAPIException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="APIDataAcquisitionImplSoapBinding" type="impl:IAPIDataAcquisition">
+
+      <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getData">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getDataRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://data.api.sitescope.mercury.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getDataResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://data.api.sitescope.mercury.com" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="ExternalServiceAPIException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ExternalServiceAPIException" namespace="http://data.api.sitescope.mercury.com" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDataWithTopology">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getDataWithTopologyRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://data.api.sitescope.mercury.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getDataWithTopologyResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://data.api.sitescope.mercury.com" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="ExternalServiceAPIException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ExternalServiceAPIException" namespace="http://data.api.sitescope.mercury.com" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMonitorTypesWithMetricNames">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getMonitorTypesWithMetricNamesRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://data.api.sitescope.mercury.com" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getMonitorTypesWithMetricNamesResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://data.api.sitescope.mercury.com" use="encoded"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="ExternalServiceAPIException">
+
+            <wsdlsoap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" name="ExternalServiceAPIException" namespace="http://data.api.sitescope.mercury.com" use="encoded"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="SiteScopeExternalDataAPI">
+
+      <wsdl:port binding="impl:APIDataAcquisitionImplSoapBinding" name="APIDataAcquisitionImpl">
+
+         <wsdlsoap:address location="https://r324c1yon0012.mesk.local:8443/SiteScope/services/APIDataAcquisitionImpl"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

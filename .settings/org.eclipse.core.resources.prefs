@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//src/com/mercury/sitescope/api/configuration/exception/ExternalServiceAPIException.java=UTF-8
+encoding//src/com/mercury/sitescope/api/data/APIDataAcquisitionImplSoapBindingStub.java=UTF-8
+encoding//src/com/mercury/sitescope/api/data/IAPIDataAcquisition.java=UTF-8
+encoding//src/com/mercury/sitescope/api/data/SiteScopeExternalDataAPI.java=UTF-8
+encoding//src/com/mercury/sitescope/api/data/SiteScopeExternalDataAPILocator.java=UTF-8
+encoding/<project>=UTF-8
+encoding/src=UTF-8

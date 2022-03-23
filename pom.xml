@@ -1,0 +1,106 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>tr.com.innova</groupId>
+  <artifactId>SiteScopeMonitor</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+
+
+<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+<dependency>
+    <groupId>commons-codec</groupId>
+    <artifactId>commons-codec</artifactId>
+    <version>1.10</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
+<dependency>
+    <groupId>commons-lang</groupId>
+    <artifactId>commons-lang</artifactId>
+    <version>2.3</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/javax.xml.rpc/javax.xml.rpc-api -->
+<dependency>
+    <groupId>javax.xml.rpc</groupId>
+    <artifactId>javax.xml.rpc-api</artifactId>
+    <version>1.1.1</version>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.8.2</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-web --> 
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-web</artifactId>
+    <version>2.8.2</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.axis/axis -->
+<dependency>
+    <groupId>org.apache.axis</groupId>
+    <artifactId>axis</artifactId>
+    <version>1.4</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/commons-discovery/commons-discovery -->
+<dependency>
+    <groupId>commons-discovery</groupId>
+    <artifactId>commons-discovery</artifactId>
+    <version>0.4</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/javax.activation/activation -->
+<dependency>
+    <groupId>javax.activation</groupId>
+    <artifactId>activation</artifactId>
+    <version>1.1</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/axis/axis-jaxrpc -->
+<dependency>
+    <groupId>axis</groupId>
+    <artifactId>axis-jaxrpc</artifactId>
+    <version>1.4</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/wsdl4j/wsdl4j -->
+<dependency>
+    <groupId>wsdl4j</groupId>
+    <artifactId>wsdl4j</artifactId>
+    <version>1.6.3</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.json/json -->
+<dependency>
+    <groupId>org.json</groupId>
+    <artifactId>json</artifactId>
+    <version>20170516</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.sun.jersey/jersey-client -->
+<dependency>
+    <groupId>com.sun.jersey</groupId>
+    <artifactId>jersey-client</artifactId>
+    <version>1.19.4</version>
+</dependency>
+
+  </dependencies>
+
+  
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.5.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <properties>
+  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+</project>
