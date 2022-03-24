@@ -240,7 +240,7 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       <wsdl:port binding="impl:APIDataAcquisitionImplSoapBinding" name="APIDataAcquisitionImpl">
 
-         <wsdlsoap:address location="https://r324c1yon0012.mesk.local:8443/SiteScope/services/APIDataAcquisitionImpl"/>
+         <wsdlsoap:address location="https://sitescope-server01:8443/SiteScope/services/APIDataAcquisitionImpl"/>
 
       </wsdl:port>
 
